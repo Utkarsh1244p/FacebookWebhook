@@ -9,6 +9,7 @@ use Illuminate\Foundation\Queue\Queueable;
 class SendWelcomeEmail implements ShouldQueue
 {
     use Queueable;
+    public $timeout=1;
     public $tries = 3;
 
     /**
@@ -25,7 +26,7 @@ class SendWelcomeEmail implements ShouldQueue
     public function handle(): void
     {
         // sleep(10);
-        throw new \Exception('Failed');
+        // throw new \Exception('Failed');
         info('Job Triggered');
     }
 }
