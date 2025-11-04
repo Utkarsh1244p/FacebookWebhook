@@ -9,6 +9,7 @@ use Illuminate\Foundation\Queue\Queueable;
 class SendWelcomeEmail implements ShouldQueue
 {
     use Queueable;
+    public $tries = 3;
 
     /**
      * Create a new job instance.
@@ -23,8 +24,8 @@ class SendWelcomeEmail implements ShouldQueue
      */
     public function handle(): void
     {
-        sleep(10);
-        // throw new \Exception('Failed');
+        // sleep(10);
+        throw new \Exception('Failed');
         info('Job Triggered');
     }
 }
