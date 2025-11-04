@@ -23,6 +23,8 @@ class SendWelcomeEmail implements ShouldQueue
      */
     public function handle(): void
     {
+        sleep(10);
+        // throw new \Exception('Failed');
         info('Job Triggered');
     }
 }
