@@ -10,7 +10,7 @@ class SendWelcomeEmail implements ShouldQueue
 {
     use Queueable;
     public $timeout=1;
-    public $tries = 3;
+    // public $tries = 3;
 
     /**
      * Create a new job instance.
@@ -25,7 +25,7 @@ class SendWelcomeEmail implements ShouldQueue
      */
     public function handle(): void
     {
-        // sleep(10);
+        sleep(10);
         // throw new \Exception('Failed');
         info('Job Triggered');
     }
