@@ -216,7 +216,7 @@ return [
         'production' => [
             'supervisor-1' => [
                 'connection' => 'redis',
-                'queue' => ['default', 'high', 'low'],
+                'queue' => ['default', 'high', 'low', 'payment'],
                 'balance' => 'auto',
                 'processes' => 10,
                 'tries' => 3,
@@ -227,7 +227,7 @@ return [
         'local' => [
             'supervisor-1' => [
                 'connection' => 'redis',
-                'queue' => ['default'],
+                'queue' => ['default', 'payment'],
                 'balance' => 'simple',
                 'processes' => 3,
                 'tries' => 3,

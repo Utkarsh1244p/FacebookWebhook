@@ -22,6 +22,6 @@ class PaymentJob implements ShouldQueue
      */
     public function handle(): void
     {
-        //
+        info('PaymentJob triggered');
     }
 }

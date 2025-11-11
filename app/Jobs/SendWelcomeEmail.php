@@ -27,6 +27,6 @@ class SendWelcomeEmail implements ShouldQueue
     {
         sleep(10);
         // throw new \Exception('Failed');
-        info('Job Triggered');
+        info('SendWelcome Job Triggered');
     }
 }
